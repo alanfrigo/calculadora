@@ -7,6 +7,9 @@ const navItems = [
   { href: "/", label: "Início" },
   { href: "/financiamento", label: "Financiamento" },
   { href: "/investimentos", label: "Investimentos" },
+  { href: "/api-key-generator", label: "API Keys" },
+  { href: "/webhook-secrets", label: "Webhooks" },
+  { href: "/uuid-generator", label: "UUID" },
 ];
 
 export function Header() {
@@ -19,7 +22,7 @@ export function Header() {
           href="/"
           className="text-xl font-bold text-zinc-900 dark:text-zinc-100"
         >
-          Calculadora
+          Toolkit
         </Link>
         <nav className="flex gap-1">
           {navItems.map((item) => {

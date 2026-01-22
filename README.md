@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Toolkit
 
-## Getting Started
+Coleção de ferramentas úteis para desenvolvedores e usuários. Uma aplicação web moderna com calculadoras financeiras e geradores de segurança.
 
-First, run the development server:
+## Ferramentas Disponíveis
+
+### Calculadoras Financeiras
+
+- **Calculadora de Financiamento** - Calcule a parcela fixa mensal usando o Sistema Price. Ideal para simular empréstimos e financiamentos imobiliários.
+- **Simulador de Investimentos** - Simule o crescimento dos seus investimentos ao longo do tempo com aportes mensais e visualização em gráfico.
+
+### Ferramentas para Desenvolvedores
+
+- **Gerador de API Keys** - Gere chaves de API seguras com entropia criptográfica em diversos formatos (alfanumérico, hex, base64, UUID). Suporte para prefixos customizados e pares chave-segredo.
+- **Gerador de Webhook Secrets** - Gere secrets para verificação de assinaturas HMAC (SHA-256, SHA-384, SHA-512) com exemplos de código em Node.js e Python.
+- **Gerador de UUID** - Gere identificadores únicos universais em várias versões: v4 (aleatório), v7 (ordenado por tempo), v1 (time-based), v3 (MD5) e v5 (SHA-1).
+
+## Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone <url-do-repositorio>
+
+# Entre no diretório
+cd toolkit
+
+# Instale as dependências
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Executando
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Servidor de desenvolvimento
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build de produção
+npm run build
 
-## Learn More
+# Executar build de produção
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Abra [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack Tecnológica
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 16** - Framework React com App Router
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework de estilos utilitários
+- **Web Crypto API** - Geração criptográfica segura
 
-## Deploy on Vercel
+## Estrutura do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/
+├── page.tsx                    # Página inicial
+├── financiamento/              # Calculadora de financiamento
+├── investimentos/              # Simulador de investimentos
+├── api-key-generator/          # Gerador de API Keys
+├── webhook-secrets/            # Gerador de Webhook Secrets
+└── uuid-generator/             # Gerador de UUID
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+components/
+├── calculators/                # Componentes de calculadoras
+├── generators/                 # Componentes de geradores
+└── ui/                         # Componentes UI reutilizáveis
+
+lib/
+├── types.ts                    # Definições de tipos TypeScript
+├── calculators.ts              # Lógica das calculadoras
+└── generators.ts               # Lógica dos geradores
+```
+
+## Licença
+
+MIT
